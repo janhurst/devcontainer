@@ -1,0 +1,38 @@
+{
+    "build": {
+        "dockerfile": "./Dockerfile",
+        "context": ".",
+        "args": {
+            "http_proxy": "${localEnv:http_proxy}",
+            "https_proxy": "${localEnv:https_proxy}"
+        },
+        "cacheFrom": "janhurst/devcontainer:base"
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/python:1": {
+            "version": "3.10",
+            "installTools": false
+        },
+        "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
+        // "ghcr.io/devcontainers/features/docker-in-docker:2": {
+        //     "version": "latest",
+        //     "enableNonRootDocker": "true",
+        //     "dockerDashComposeVersion": "v2"
+        // },
+        "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {},
+        "ghcr.io/devcontainers/features/node:1": {},
+        "ghcr.io/devcontainers/features/dotnet:1": {
+            "version": "7"
+        },
+        "ghcr.io/devcontainers/features/azure-cli:1": {},
+        "ghcr.io/stuartleeks/dev-container-features/azure-cli-persistence:0": {},
+        "ghcr.io/devcontainers-contrib/features/poetry:2": {},
+        "ghcr.io/devcontainers-contrib/features/pipx-package:1": {
+            "package": "hatch",
+            "injections": "hatchling git+https://github.com/janhurst/hatch-conda.git"
+        },
+        "ghcr.io/devcontainers-contrib/features/copier:7": {},
+        "ghcr.io/iterative/features/dvc:1": {}
+    },
+    "remoteUser": "vscode"
+}

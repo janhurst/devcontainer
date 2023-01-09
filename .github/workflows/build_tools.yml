@@ -1,0 +1,48 @@
+name: "build"
+on: # rebuild any PRs and main branch changes
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (GitHub)
+        uses: actions/checkout@v2
+
+      - uses: dorny/paths-filter@v2
+        id: filter
+        with:
+          filters: |
+            base:
+              - 'base/**'
+            conda:
+              - 'conda/**'
+
+      - name: Docker Login
+        uses: docker/login-action@v2.1.0
+        env:
+          DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
+        with:
+          username: ${{ github.repository_owner }} # optional
+          password: ${{ secrets.DOCKER_TOKEN }}
+
+      - name: Build janhurst/devcontainer:base
+        if: steps.filter.outputs.base == 'true' || github.event == 'workflow_dispatch'
+        uses: devcontainers/ci@v0.2
+        with:
+          imageName: janhurst/devcontainer
+          imageTag: base
+          subFolder: base
+          push: always
+
+      - name: Build janhurst/devcontainer:conda
+        if: steps.filter.outputs.conda == 'true' || github.event == 'workflow_dispatch'
+        uses: devcontainers/ci@v0.2
+        with:
+          imageName: janhurst/devcontainer
+          imageTag: conda
+          subFolder: conda
+          push: always
