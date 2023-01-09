@@ -1,0 +1,12 @@
+{
+    "build": {
+        "dockerfile": "./Dockerfile",
+        "context": ".",
+        "args": {
+            "http_proxy": "${localEnv:http_proxy}",
+            "https_proxy": "${localEnv:https_proxy}"
+        },
+        "cacheFrom": "janhurst/devcontainer:base"
+    },
+    "remoteUser": "vscode"
+}
