@@ -33,7 +33,7 @@ jobs:
           password: ${{ secrets.DOCKER_TOKEN }}
     
       - name: Build janhurst/devcontainer:tools
-        if: steps.filter.outputs.tools == 'true' or github.event == 'workflow_dispatch'
+        if: steps.filter.outputs.tools == 'true' || github.event == 'workflow_dispatch'
         uses: devcontainers/ci@v0.2
         with:
           # Change this to point to your image name
@@ -44,7 +44,7 @@ jobs:
           push: always
           
       - name: Build janhurst/devcontainer:base
-        if: steps.filter.outputs.base == 'true' or github.event == 'workflow_dispatch' 
+        if: steps.filter.outputs.base == 'true' || github.event == 'workflow_dispatch' 
         uses: devcontainers/ci@v0.2
         with:
           # Change this to point to your image name
