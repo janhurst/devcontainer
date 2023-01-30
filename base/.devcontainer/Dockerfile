@@ -33,11 +33,3 @@ USER vscode
 RUN ipython profile create
 RUN echo "c.InteractiveShellApp.exec_lines = ['%load_ext autoreload', '%autoreload 2']" >> /home/vscode/.ipython/profile_default/ipython_config.py
 USER root
-
-# VS Code overrides ENTRYPOINT and CMD when executing `docker run` by default.
-# Setting the ENTRYPOINT to docker-init.sh will configure non-root access to
-# the Docker socket if "overrideCommand": false is set in devcontainer.json.
-# The script will also execute CMD if you need to alter startup behaviors.
-ENTRYPOINT [ "/usr/local/share/docker-init.sh" ]
-VOLUME [ "/var/lib/docker" ]
-CMD ["sleep", "infinity"]
