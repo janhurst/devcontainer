@@ -1,4 +1,4 @@
-name: 'build' 
+name: "build"
 on: # rebuild any PRs and main branch changes
   workflow_dispatch:
   push:
@@ -9,10 +9,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-
       - name: Checkout (GitHub)
         uses: actions/checkout@v2
-        
+
       - uses: dorny/paths-filter@v2
         id: filter
         with:
@@ -20,7 +19,7 @@ jobs:
             tools:
               - 'tools/**'
             base:
-              - 'base/**'      
+              - 'base/**'
 
       - name: Docker Login
         # You may pin to the exact commit or the version.
@@ -31,20 +30,9 @@ jobs:
         with:
           username: ${{ github.repository_owner }} # optional
           password: ${{ secrets.DOCKER_TOKEN }}
-    
-      - name: Build janhurst/devcontainer:tools
-        if: steps.filter.outputs.tools == 'true' || github.event == 'workflow_dispatch'
-        uses: devcontainers/ci@v0.2
-        with:
-          # Change this to point to your image name
-          imageName: janhurst/devcontainer
-          imageTag: tools
-          cacheFrom: janhurst/devcontainer:tools
-          subFolder: tools
-          push: always
-          
+
       - name: Build janhurst/devcontainer:base
-        if: steps.filter.outputs.base == 'true' || github.event == 'workflow_dispatch' 
+        if: steps.filter.outputs.base == 'true' || github.event == 'workflow_dispatch'
         uses: devcontainers/ci@v0.2
         with:
           # Change this to point to your image name
@@ -52,4 +40,4 @@ jobs:
           imageTag: base
           cacheFrom: janhurst/devcontainer:base
           subFolder: base
-          push: always          
+          push: always
