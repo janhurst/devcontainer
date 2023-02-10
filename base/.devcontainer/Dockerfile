@@ -15,9 +15,11 @@ RUN chmod 0640 /etc/sudoers && \
 
 # # add git azure devops authentication settings and download and install Azure DevOps Credential provider
 # RUN curl -sL https://raw.githubusercontent.com/microsoft/artifacts-credprovider/master/helpers/installcredprovider.sh | bash -
-# USER vscode
-# RUN git config --global credential.useHttpPath true
-# USER root
+
+# add configuration to allow Azure Devops to authenticate http based git repo URLs
+USER vscode
+RUN git config --global credential.useHttpPath true
+USER root
 
 # # Download and install the Azure Artifacts credential provider
 # RUN wget -qO- https://aka.ms/install-artifacts-credprovider.sh | bash
