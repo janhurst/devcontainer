@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/devcontainers/base:debian
+FROM mcr.microsoft.com/devcontainers/miniconda:3
 
 # ARG APT_MIRROR="au.archive"
 # RUN sudo sed -i -e "s/http:\/\/archive/http:\/\/$APT_MIRROR/" /etc/apt/sources.list
@@ -9,6 +9,8 @@ RUN chmod 0640 /etc/sudoers && \
     chmod 0440 /etc/sudoers
 
 # install some common python packages in the base environment
+RUN conda install -c conda-forge mamba \
+    && conda clean -afy
 COPY environment.yml /tmp/environment.yml
 RUN mamba env update -n base -f /tmp/environment.yml \
     && mamba clean -afy \
