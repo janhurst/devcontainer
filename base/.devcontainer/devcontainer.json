@@ -18,7 +18,6 @@
         "ghcr.io/devcontainers/features/dotnet:1": { "version": "7" },
         "ghcr.io/devcontainers/features/azure-cli:1": {},
         "ghcr.io/stuartleeks/dev-container-features/azure-cli-persistence:0": {},
-        "ghcr.io/rocker-org/devcontainer-features/miniforge:1": {},
         "ghcr.io/devcontainers-contrib/features/black:2": {},
         "ghcr.io/devcontainers-contrib/features/flake8:2": {},
         "ghcr.io/devcontainers-contrib/features/mypy:2": {},
