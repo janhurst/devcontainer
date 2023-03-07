@@ -9,6 +9,10 @@ RUN chmod 0640 /etc/sudoers && \
     chmod 0440 /etc/sudoers
 
 # install some common python packages in the base environment
+RUN conda update -n base conda \
+    && conda clean -afy
+RUN conda update --all \
+    && conda clean -afy
 RUN conda install -c conda-forge mamba \
     && conda clean -afy
 COPY environment.yml /tmp/environment.yml
