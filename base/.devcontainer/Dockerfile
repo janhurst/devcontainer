@@ -15,10 +15,10 @@ RUN conda update --all \
     && conda clean -afy
 RUN conda install -c conda-forge mamba \
     && conda clean -afy
-COPY environment.yml /tmp/environment.yml
-RUN mamba env update -n base -f /tmp/environment.yml \
-    && mamba clean -afy \
-    && rm /tmp/environment.yml
+# COPY environment.yml /tmp/environment.yml
+# RUN mamba env update -n base -f /tmp/environment.yml \
+#     && mamba clean -afy \
+#     && rm /tmp/environment.yml
 
 # add configuration to allow Azure Devops to authenticate http based git repo URLs
 USER vscode
