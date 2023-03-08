@@ -24,7 +24,7 @@
         "ghcr.io/devcontainers-contrib/features/poetry:2": {},
         "ghcr.io/devcontainers-contrib/features/pipx-package:1": {
             "package": "hatch",
-            "injections": "hatch-conda"
+            "injections": "hatch-conda hatchling"
         },
         "ghcr.io/iterative/features/dvc:1": {}
     },
