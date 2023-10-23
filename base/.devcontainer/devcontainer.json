@@ -5,6 +5,9 @@
         "cacheFrom": "janhurst/devcontainer:base"
     },
     "features": {
+        // git lfs
+        "ghcr.io/devcontainers/features/git-lfs:1": {},
+        // node and base python
         "ghcr.io/devcontainers/features/node:1": {},
         "ghcr.io/devcontainers/features/python:1": {
             "version": "3.10",
