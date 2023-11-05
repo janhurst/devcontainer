@@ -21,7 +21,8 @@ RUN wget https://aka.ms/downloadazcopy-v10-linux -O - | tar -xzvf - \
 
 # create some directories and fix their permissions
 RUN mkdir -p /home/vscode/.cache && chown vscode:vscode /home/vscode/.cache \
-    && mkdir -p /home/vscode/.local && chown vscode:vscode /home/vscode/.local
+    && mkdir -p /home/vscode/.local && chown vscode:vscode /home/vscode/.local \
+    && mkdir -p /home/vscode/.config && chown vscode:vscode /home/vscode/.config
 
 # VS Code overrides ENTRYPOINT and CMD when executing `docker run` by default.
 # Setting the ENTRYPOINT to docker-init.sh will configure non-root access to
