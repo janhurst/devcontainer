@@ -20,7 +20,8 @@
         //"ghcr.io/devcontainers/features/docker-in-docker:2": {},
         "ghcr.io/devcontainers-contrib/features/dive:1": {},
         // k8s
-        
+        "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {},
+        "ghcr.io/mpriscella/features/kind:1": {},
         // cuda
         "ghcr.io/devcontainers/features/nvidia-cuda:1": {
             "cudaVersion": "12.2"
