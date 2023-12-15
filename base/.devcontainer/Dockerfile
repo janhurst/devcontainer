@@ -29,5 +29,4 @@ RUN mkdir -p /home/vscode/.cache && chown vscode:vscode /home/vscode/.cache \
 # the Docker socket if "overrideCommand": false is set in devcontainer.json.
 # The script will also execute CMD if you need to alter startup behaviors.
 ENTRYPOINT [ "/usr/local/share/docker-init.sh" ]
-VOLUME [ "/var/lib/docker" ]
 CMD ["sleep", "infinity"]
