@@ -30,9 +30,9 @@
         "ghcr.io/devcontainers/features/azure-cli:1": {},
         "ghcr.io/stuartleeks/dev-container-features/azure-cli-persistence:0": {},
         // aws
-        //"ghcr.io/devcontainers/features/aws-cli:1": {},
-        //"ghcr.io/joshuanianji/devcontainer-features/aws-cli-persistence:0": {},
-        //"ghcr.io/devcontainers-contrib/features/aws-cdk:2": {}
+        "ghcr.io/devcontainers/features/aws-cli:1": {},
+        "ghcr.io/joshuanianji/devcontainer-features/aws-cli-persistence:0": {},
+        "ghcr.io/devcontainers-contrib/features/aws-cdk:2": {},
         // misc
         "ghcr.io/stuartleeks/dev-container-features/shell-history:0": {}
     },
