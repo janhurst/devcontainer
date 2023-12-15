@@ -37,6 +37,26 @@
         // misc
         "ghcr.io/stuartleeks/dev-container-features/shell-history:0": {}
     },
+    // add some extensions that i always seem to want
+    "customizations": {
+		"vscode": {
+			"extensions": [
+                "ms-azuretools.vscode-docker",
+                "amazonwebservices.aws-toolkit-vscode",
+                "ms-vscode.azure-account",
+                "ms-azuretools.vscode-azurevirtualmachines",
+                "mhutchie.git-graph",
+				"ms-python.python",
+                "ms-python.vscode-pylance",
+				"ms-python.black-formatter",
+				"ms-python.mypy-type-checker",
+				"ms-toolsai.jupyter",
+				"charliermarsh.ruff",
+				"tamasfe.even-better-toml",
+                "vscode-icons-team.vscode-icons"
+			]
+		}
+	},
     "hostRequirements": {
         "gpu": "optional"
     },
