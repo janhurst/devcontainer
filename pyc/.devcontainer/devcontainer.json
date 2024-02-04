@@ -22,6 +22,9 @@
             "cudaVersion": "12.2"
         },
         "ghcr.io/iterative/features/nvtop:1": {},
+        // google
+        "ghcr.io/dhoeric/features/google-cloud-cli:1": {},
+        "ghcr.io/joshuanianji/devcontainer-features/gcloud-cli-persistence:1": {},
         // aws
         "ghcr.io/devcontainers/features/aws-cli:1": {},
         "ghcr.io/joshuanianji/devcontainer-features/aws-cli-persistence:0": {},
