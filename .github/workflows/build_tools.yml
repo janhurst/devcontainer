@@ -38,6 +38,15 @@ jobs:
           subFolder: base
           push: always
 
+      - name: Build janhurst/devcontainer:pyc
+        if: steps.filter.outputs.base == 'true' || github.event == 'workflow_dispatch'
+        uses: devcontainers/ci@v0.2
+        with:
+          imageName: janhurst/devcontainer
+          imageTag: pyc
+          subFolder: pyc
+          push: always
+
       - name: Build janhurst/devcontainer:conda
         if: steps.filter.outputs.conda == 'true' || github.event == 'workflow_dispatch'
         uses: devcontainers/ci@v0.2
