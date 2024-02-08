@@ -26,6 +26,8 @@
         // google
         "ghcr.io/dhoeric/features/google-cloud-cli:1": {},
         "ghcr.io/joshuanianji/devcontainer-features/gcloud-cli-persistence:1": {},
+        // terraform
+        "ghcr.io/devcontainers/features/terraform:1": {},
         // aws
         "ghcr.io/devcontainers/features/aws-cli:1": {},
         "ghcr.io/joshuanianji/devcontainer-features/aws-cli-persistence:0": {},
