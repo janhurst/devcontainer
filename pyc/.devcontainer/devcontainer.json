@@ -11,6 +11,7 @@
         // python and related utils
         "ghcr.io/devcontainers/features/python:1": { "version": "3.11" },
         "ghcr.io/devcontainers-contrib/features/poetry:2": {},
+        "ghcr.io/devcontainers-contrib/features/hatch:2": {},
         // docker
         "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
         "ghcr.io/devcontainers-contrib/features/dive:1": {},
