@@ -20,6 +20,8 @@ jobs:
               - 'base/**'
             conda:
               - 'conda/**'
+            pyc:
+              - 'pyc/**'
 
       - name: Docker Login
         uses: docker/login-action@v2.1.0
