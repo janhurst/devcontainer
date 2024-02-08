@@ -41,7 +41,7 @@ jobs:
           push: always
 
       - name: Build janhurst/devcontainer:pyc
-        if: steps.filter.outputs.base == 'true' || github.event == 'workflow_dispatch'
+        if: steps.filter.outputs.pyc == 'true' || github.event == 'workflow_dispatch'
         uses: devcontainers/ci@v0.2
         with:
           imageName: janhurst/devcontainer
