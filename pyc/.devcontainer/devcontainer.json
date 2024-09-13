@@ -9,7 +9,9 @@
         // node
         "ghcr.io/devcontainers/features/node:1": {},
         // python and related utils
-        "ghcr.io/devcontainers/features/python:1": { "version": "3.11" },
+        "ghcr.io/devcontainers/features/python:1": {
+            "version": "3.11"
+        },
         "ghcr.io/devcontainers-contrib/features/poetry:2": {},
         "ghcr.io/devcontainers-contrib/features/hatch:2": {},
         // docker
@@ -31,13 +33,17 @@
         "ghcr.io/devcontainers-contrib/features/terragrunt:1": {},
         // packer
         "ghcr.io/devcontainers-contrib/features/packer-asdf:2": {},
+        // terraspace
+        "ghcr.io/flexwie/devcontainer-features/terraspace:1": {},
         // aws
         "ghcr.io/devcontainers/features/aws-cli:1": {},
         "ghcr.io/joshuanianji/devcontainer-features/aws-cli-persistence:0": {},
         // misc
         "ghcr.io/stuartleeks/dev-container-features/shell-history:0": {},
         // data
-        "ghcr.io/iterative/features/dvc:1": {}
+        "ghcr.io/iterative/features/dvc:1": {},
+        // zsh
+        "ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {}
     },
     // add some extensions that i always seem to want
     "customizations": {
@@ -53,7 +59,10 @@
                 "ms-toolsai.jupyter",
                 "charliermarsh.ruff",
                 "tamasfe.even-better-toml",
-                "vscode-icons-team.vscode-icons"
+                "vscode-icons-team.vscode-icons",
+                "eamodio.gitlens",
+                "github.vscode-github-actions",
+                "bierner.markdown-preview-github-styles"
             ]
         }
     },
