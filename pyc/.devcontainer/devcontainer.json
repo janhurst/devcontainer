@@ -9,9 +9,7 @@
         // node
         "ghcr.io/devcontainers/features/node:1": {},
         // python and related utils
-        "ghcr.io/devcontainers/features/python:1": {
-            "version": "3.11"
-        },
+        "ghcr.io/devcontainers/features/python:1": {},
         "ghcr.io/devcontainers-contrib/features/poetry:2": {},
         "ghcr.io/devcontainers-contrib/features/hatch:2": {},
         // docker
@@ -22,7 +20,7 @@
         "ghcr.io/mpriscella/features/kind:1": {},
         // cuda
         "ghcr.io/devcontainers/features/nvidia-cuda:1": {
-            "cudaVersion": "12.2"
+            "cudaVersion": "12.6"
         },
         "ghcr.io/iterative/features/nvtop:1": {},
         // google
