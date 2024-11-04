@@ -42,7 +42,9 @@
         // data
         "ghcr.io/iterative/features/dvc:1": {},
         // zsh
-        "ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {}
+        "ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {},
+        // go
+        "ghcr.io/devcontainers/features/go:1": {}
     },
     // add some extensions that i always seem to want
     "customizations": {
